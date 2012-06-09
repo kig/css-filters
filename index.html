@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Filters Demo</title>
+    <style>
+      h1,h2,h3 {
+      color: #208020;
+      font-family: Open Sans, sans;
+      }
+      h1 {
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      -ms-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s;
+      }
+      h1:hover {
+      -webkit-filter: blur(2px) drop-shadow(0px -5px 10px cyan) hue-rotate(60deg) invert(80%) grayscale(10%) sepia(10%) saturate(150%);
+      -moz-filter: blur(2px) drop-shadow(0px -5px 10px cyan) hue-rotate(60deg) invert(80%) grayscale(10%) sepia(10%) saturate(150%);
+      -ms-filter: blur(2px) drop-shadow(0px -5px 10px cyan) hue-rotate(60deg) invert(80%) grayscale(10%) sepia(10%) saturate(150%);
+      -o-filter: blur(2px) drop-shadow(0px -5px 10px cyan) hue-rotate(60deg) invert(80%) grayscale(10%) sepia(10%) saturate(150%);
+      filter: blur(2px) drop-shadow(0px -5px 10px cyan) hue-rotate(60deg) invert(80%) grayscale(10%) sepia(10%) saturate(150%);
+      }
+      h3 {
+      color: #40A040;
+      }
+      p {
+      color: #406080;
+      }
+      div {
+      display: inline-block;
+      }
+      div {
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      -ms-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s;
+      }
+      div:nth-child(1):hover {
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: grayscale(100%);
+      }
+      div:nth-child(2):hover {
+      -webkit-filter: sepia(100%);
+      -moz-filter: sepia(100%);
+      -ms-filter: sepia(100%);
+      -o-filter: sepia(100%);
+      filter: sepia(100%);
+      }
+      div:nth-child(3):hover {
+      -webkit-filter: hue-rotate(180deg);
+      -moz-filter: hue-rotate(180deg);
+      -ms-filter: hue-rotate(180deg);
+      -o-filter: hue-rotate(180deg);
+      filter: hue-rotate(180deg);
+      }
+      div:nth-child(4):hover {
+      -webkit-filter: invert(100%);
+      -moz-filter: invert(100%);
+      -ms-filter: invert(100%);
+      -o-filter: invert(100%);
+      filter: invert(100%);
+      }
+      div:nth-child(5):hover {
+      -webkit-filter: brightness(50%);
+      -moz-filter: brightness(50%);
+      -ms-filter: brightness(50%);
+      -o-filter: brightness(50%);
+      filter: brightness(50%);
+      }
+      div:nth-child(6):hover {
+      -webkit-filter: contrast(150%);
+      -moz-filter: contrast(150%);
+      -ms-filter: contrast(150%);
+      -o-filter: contrast(150%);
+      filter: contrast(150%);
+      }
+      div:nth-child(7):hover {
+      -webkit-filter: blur(5px);
+      -moz-filter: blur(5px);
+      -ms-filter: blur(5px);
+      -o-filter: blur(5px);
+      filter: blur(5px);
+      }
+      div:nth-child(8):hover {
+      -webkit-filter: saturate(180%);
+      -moz-filter: saturate(180%);
+      -ms-filter: saturate(180%);
+      -o-filter: saturate(180%);
+      filter: saturate(180%);
+      }
+      div:nth-child(9):hover {
+      -webkit-filter: drop-shadow(0px 5px 10px black);
+      -moz-filter: drop-shadow(0px 5px 10px black);
+      -ms-filter: drop-shadow(0px 5px 10px black);
+      -o-filter: drop-shadow(0px 5px 10px black);
+      filter: drop-shadow(0px 5px 10px black);
+      }
+      div:nth-child(10):hover {
+      -webkit-filter: opacity(0.5);
+      -moz-filter: opacity(0.5);
+      -ms-filter: opacity(0.5);
+      -o-filter: opacity(0.5);
+      filter: opacity(0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Filters Demo</h1>
+    <h2>Hover over an element to apply the filter</h2>
+    <span>
+    <div><h3>grayscale(100%)</h3><p>Takes out the colors
+    <p><img src="images/1.jpg">
+    </div><div><h3>sepia(100%)</h3><p>Makes colors brown
+    <p><img src="images/2.jpg">
+    </div><div><h3>hue-rotate(180deg)</h3><p>Turns the color wheel
+    <p><img src="images/3.jpg">
+    </div><div><h3>invert(100%)</h3><p>Inverts the colors
+    <p><img src="images/4.jpg">
+    </div><div><h3>brightness(50%)</h3><p>Adds brightness
+    <p><img src="images/5.jpg">
+    </div><div><h3>contrast(150%)</h3><p>Makes darks darker and brights brighter
+    <p><img src="images/1.jpg">
+    </div><div><h3>blur(5px)</h3><p>Blurs the element
+    <p><img src="images/2.jpg">
+    </div><div><h3>saturate(180%)</h3><p>Makes colors brighter
+    <p><img src="images/3.jpg">
+    </div><div><h3>drop-shadow(0px 5px 10px black)</h3><p>Adds a drop shadow
+    <p><img src="images/4.jpg">
+    </div><div><h3>opacity(0.5)</h3><p>Makes the element transparent
+    <p><img src="images/5.jpg">
+    </div>
+    </span>
+  </body>
+</html>
