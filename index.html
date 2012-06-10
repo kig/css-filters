@@ -14,7 +14,7 @@
       -o-transition: 1s;
       transition: 1s;
       }
-      h1:hover {
+      h1[filter=on],h1:hover {
       -webkit-filter: blur(2px) drop-shadow(0px -5px 10px cyan) hue-rotate(60deg) invert(80%) grayscale(10%) sepia(10%) saturate(150%);
       -moz-filter: blur(2px) drop-shadow(0px -5px 10px cyan) hue-rotate(60deg) invert(80%) grayscale(10%) sepia(10%) saturate(150%);
       -ms-filter: blur(2px) drop-shadow(0px -5px 10px cyan) hue-rotate(60deg) invert(80%) grayscale(10%) sepia(10%) saturate(150%);
@@ -37,70 +37,70 @@
       -o-transition: 1s;
       transition: 1s;
       }
-      div:nth-child(1):hover {
+      div:nth-child(1)[filter=on],div:nth-child(1):hover {
       -webkit-filter: grayscale(100%);
       -moz-filter: grayscale(100%);
       -ms-filter: grayscale(100%);
       -o-filter: grayscale(100%);
       filter: grayscale(100%);
       }
-      div:nth-child(2):hover {
+      div:nth-child(2)[filter=on],div:nth-child(2):hover {
       -webkit-filter: sepia(100%);
       -moz-filter: sepia(100%);
       -ms-filter: sepia(100%);
       -o-filter: sepia(100%);
       filter: sepia(100%);
       }
-      div:nth-child(3):hover {
+      div:nth-child(3)[filter=on],div:nth-child(3):hover {
       -webkit-filter: hue-rotate(180deg);
       -moz-filter: hue-rotate(180deg);
       -ms-filter: hue-rotate(180deg);
       -o-filter: hue-rotate(180deg);
       filter: hue-rotate(180deg);
       }
-      div:nth-child(4):hover {
+      div:nth-child(4)[filter=on],div:nth-child(4):hover {
       -webkit-filter: invert(100%);
       -moz-filter: invert(100%);
       -ms-filter: invert(100%);
       -o-filter: invert(100%);
       filter: invert(100%);
       }
-      div:nth-child(5):hover {
+      div:nth-child(5)[filter=on],div:nth-child(5):hover {
       -webkit-filter: brightness(50%);
       -moz-filter: brightness(50%);
       -ms-filter: brightness(50%);
       -o-filter: brightness(50%);
       filter: brightness(50%);
       }
-      div:nth-child(6):hover {
+      div:nth-child(6)[filter=on],div:nth-child(6):hover {
       -webkit-filter: contrast(150%);
       -moz-filter: contrast(150%);
       -ms-filter: contrast(150%);
       -o-filter: contrast(150%);
       filter: contrast(150%);
       }
-      div:nth-child(7):hover {
+      div:nth-child(7)[filter=on],div:nth-child(7):hover {
       -webkit-filter: blur(5px);
       -moz-filter: blur(5px);
       -ms-filter: blur(5px);
       -o-filter: blur(5px);
       filter: blur(5px);
       }
-      div:nth-child(8):hover {
+      div:nth-child(8)[filter=on],div:nth-child(8):hover {
       -webkit-filter: saturate(180%);
       -moz-filter: saturate(180%);
       -ms-filter: saturate(180%);
       -o-filter: saturate(180%);
       filter: saturate(180%);
       }
-      div:nth-child(9):hover {
+      div:nth-child(9)[filter=on],div:nth-child(9):hover {
       -webkit-filter: drop-shadow(0px 5px 10px black);
       -moz-filter: drop-shadow(0px 5px 10px black);
       -ms-filter: drop-shadow(0px 5px 10px black);
       -o-filter: drop-shadow(0px 5px 10px black);
       filter: drop-shadow(0px 5px 10px black);
       }
-      div:nth-child(10):hover {
+      div:nth-child(10)[filter=on],div:nth-child(10):hover {
       -webkit-filter: opacity(0.5);
       -moz-filter: opacity(0.5);
       -ms-filter: opacity(0.5);
@@ -135,6 +135,19 @@
     <p><img src="images/5.jpg">
     </div>
     </span>
+    <script>
+      var makeClickable = function(tagName) {
+        var es = document.body.getElementsByTagName(tagName);
+        for (var i=0; i<es.length; i++) {
+          es[i].onclick = function() {
+            this.setAttribute('filter', 
+                this.getAttribute('filter') == 'on' ? 'off' : 'on');
+          }
+        }
+      };
+      makeClickable('div');
+      makeClickable('h1');
+    </script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
